@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="550dp"
+        android:layout_height="950dp"
+        app:layout_constraintBaseline_toBaselineOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.273"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/fondo_menu" />
+
+    <Button
+        android:id="@+id/btnFacil"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="20dp"
+        android:onClick="clickFacil"
+        android:text="Fácil"
+        android:textColor="@color/cafe"
+        app:strokeColor="@color/cafe"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        style="?attr/materialButtonOutlinedStyle"/>
+
+    <Button
+        android:id="@+id/btnIntermedio"
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:onClick="clickIntermedio"
+        android:text="Intermedio"
+        android:textColor="@color/cafe"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnFacil"
+        app:strokeColor="@color/cafe" />
+
+    <Button
+        android:id="@+id/btnImposible"
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:onClick="clickImposible"
+        android:text="Imposible"
+        android:textColor="@color/cafe"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnIntermedio"
+        app:strokeColor="@color/cafe" />
+
+    <Button
+        android:id="@+id/btnReloj"
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="20dp"
+        android:onClick="clickReloj"
+        android:text="¿Contrarreloj?"
+        android:textColor="@color/cafe"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnImposible"
+        app:strokeColor="@color/cafe" />
+
+    <TextView
+        android:id="@+id/textView"
+        style="@style/Widget.AppCompat.TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="NIVEL DIFICULTAD"
+        android:textColor="@color/cafe"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="@+id/btnFacil"
+        app:layout_constraintStart_toStartOf="@+id/btnFacil"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/x"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="15dp"
+        android:onClick="iniciaJugadorX"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="@+id/btnImposible"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:srcCompat="@drawable/x" />
+
+    <ImageView
+        android:id="@+id/o"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="40dp"
+        android:onClick="iniciaJugadorO"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/btnImposible"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:srcCompat="@drawable/o" />
+
+    <Button
+        android:id="@+id/iniciar"
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:onClick="clickJugar"
+        android:text="Jugar"
+        android:textColor="@color/cafe"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/o"
+        app:layout_constraintStart_toStartOf="@+id/x"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:strokeColor="@color/cafe" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="¿Quién inicia?"
+        android:visibility="invisible"
+        android:textColor="@color/cafe"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/btnImposible"
+        app:layout_constraintStart_toStartOf="@+id/btnImposible"
+        app:layout_constraintTop_toBottomOf="@+id/btnReloj"
+        app:strokeColor="@color/cafe" />
+
+    <TextView
+        android:id="@+id/yo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="YO"
+        android:textColor="@color/cafe"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/x"
+        app:layout_constraintStart_toStartOf="@+id/x"
+        app:layout_constraintTop_toBottomOf="@+id/x" />
+
+    <TextView
+        android:id="@+id/cpu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="CPU"
+        android:textColor="@color/cafe"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/o"
+        app:layout_constraintStart_toStartOf="@+id/o"
+        app:layout_constraintTop_toBottomOf="@+id/o" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
